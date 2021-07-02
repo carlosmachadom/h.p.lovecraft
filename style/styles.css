@@ -25,12 +25,13 @@ html
     font-family: 'Amiri', serif; */
 }
 
-/*header*/
+/*tribute header*/
 
 .tribute-body
 {
     width: 100vw;
     height: fit-content;
+    position: ;
     /* display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 15vw auto 10vh;
