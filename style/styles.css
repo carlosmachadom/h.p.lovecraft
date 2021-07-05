@@ -193,6 +193,7 @@ button
     background-color: rgba(22, 37, 56, 0.6);
     border: solid 4px var(--clear-blue);
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .lovecraft-leyend .description-container h2
@@ -224,10 +225,11 @@ button
 .timeline-container .famous-tales-section
 {
     text-align: center;
-    padding-top: 2.5rem;
+    padding: 3.5rem 0;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: var(--middle-dark-blue);
 }
 
 .famous-tales-section h2
@@ -236,7 +238,7 @@ button
     font-weight: 700;
     line-height: 35px;
     font-family: var(--secondary-font);
-    color: var(--dark-blue);
+    color: var(--white-blue);
 }
 
 .famous-tales-section .books-container
@@ -347,5 +349,10 @@ button
     .timeline-container .lovecraft-leyend .description-container
     {
         box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .lovecraft-leyend .description-container
+    {
+        margin-bottom: 0;
     }
 }
