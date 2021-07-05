@@ -4,11 +4,14 @@
 {
     --dark-blue: #162538;
     --middle-dark-blue: #22344b;
+    --clear-dark-blue: #84a0c5;
     --middle-blue: #2e7b8c;
     --blue: #41bfb3;
     --clear-blue: #57f2c6;
     --font-color-clear-blue: #bcd6cf;
+    --font-color-dark-blue: #162538;
     --red: #400101;
+    --white-blue: #e7f7f2;
     --main-font: 'Cinzel Decorative', cursive;
     --secondary-font: 'Amiri', serif;
     --third-font: 'Open Sans', sans-serif;
@@ -34,6 +37,11 @@ html
 {
     width: 100vw;
     height: fit-content;
+}
+
+a
+{
+    text-decoration: none;
 }
 
 /* Header*/
@@ -72,7 +80,6 @@ html
 }
 
 /* Main*/
-
 .tribute-body .tribute-main 
 {
     width: 100%;
@@ -93,8 +100,6 @@ html
     text-align: center;
 }
 
-
-
 .tribute-body .tribute-main .hero-container .image-container img
 {
     width: 100%;
@@ -109,12 +114,12 @@ html
     width: 100%;
     max-width: 1200px;
     height: fit-content;
-    padding: 2rem 2rem;
+    padding: 1.4rem 2rem;
     position: absolute;
     top: calc(50%);
     left: calc(50%);
     transform: translate(-50%, -50%);
-    background-color: 	rgba(22, 37, 56, 0.4);
+    background-color:rgba(22, 37, 56, 0.4);
 }
 
 .tribute-body .tribute-main .hero-container .image-container .floating-description-box h2
@@ -139,4 +144,58 @@ html
     letter-spacing: 1.5px;
     font-family: var(--third-font);
     cursor: pointer;
+}
+
+/*---------- Time Line ---------*/
+.tribute-body .tribute-main .timeline-container
+{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--clear-dark-blue);
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend .image-container
+{
+    margin-block-end: 1.5rem;
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend .image-container img
+{
+    width: 70%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
+    filter: saturate(0%);
+    border: solid 4px var(--white-blue);
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container
+{
+    text-align: center;
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container h2
+{
+    font-size: 1.8rem;
+    font-family: var(--main-font);
+    color: var(--font-color-dark-blue);
+    margin-block-end: 1.5rem;
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container p
+{
+    font-size: 1.2rem;
+    font-family: var(--third-font);
+    font-weight: 500;
+    color: var(--font-color-dark-blue);
+}
+
+/*----------Media Queries----------*/
+
+@media (min-width: 380px) 
+{
+    .tribute-body .tribute-main .hero-container .image-container .floating-description-box
+    {
+        padding: 2rem 2rem;
+    }
 }
