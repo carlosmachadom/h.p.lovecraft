@@ -36,12 +36,26 @@ html
 .tribute-body
 {
     width: 100vw;
-    height: fit-content;
 }
 
 a
 {
     text-decoration: none;
+    color: var(--white-blue);
+}
+
+button
+{
+    padding: 0.5rem 1.5rem;
+    background-color: var(--dark-blue);
+    border: solid 2px var(--clear-blue);
+    color: var(--font-color-clear-blue);
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-family: var(--third-font);
+    cursor: pointer;
+    box-shadow: 2px 2px 45px var(--clear-blue);
 }
 
 /* Header*/
@@ -50,10 +64,11 @@ a
 {
     width: 100%;
     height: 80px;
-    background-color: var(--dark-blue);
+    background-color: rgb(22, 37, 56);
     display: grid;
     place-items: center;    
     padding: 1rem 0;
+    z-index: 1;
 }
 
 .tribute-body .tribute-header__text-container
@@ -69,6 +84,7 @@ a
     letter-spacing: 1.5px;
     font-family: 'Cinzel Decorative', cursive;
     font-weight: 700;
+    color: var(--clear-blue);
 }
 
 .tribute-body .tribute-header__text-container p
@@ -83,6 +99,7 @@ a
 .tribute-body .tribute-main 
 {
     width: 100%;
+    height: fit-content;
     padding: 0 0 2.5rem 0;
 }
 
@@ -97,7 +114,7 @@ a
 {  
     background-color: var(--middle-dark-blue);
     position: relative;
-    text-align: center;
+    text-align: center;    
 }
 
 .tribute-body .tribute-main .hero-container .image-container img
@@ -106,13 +123,13 @@ a
     max-width: 1200px;
     margin: 0 auto;
     display: block;
-    filter: saturate(10%);
+    filter: saturate(0%);
 }
 
 .tribute-body .tribute-main .hero-container .image-container .floating-description-box
 {
     width: 100%;
-    max-width: 1200px;
+    max-width: 700px;
     height: fit-content;
     padding: 1.4rem 2rem;
     position: absolute;
@@ -124,7 +141,7 @@ a
 
 .tribute-body .tribute-main .hero-container .image-container .floating-description-box h2
 {
-    color: var(--font-color-clear-blue);
+    color: var(--clear-blue);
     font-size: clamp(2.4rem, 2.8vw, 3.4rem);
     letter-spacing: 1px;
     line-height: 35px;
@@ -133,25 +150,23 @@ a
     margin: 0 0 1rem 0;
 }
 
-.tribute-body .tribute-main .hero-container .image-container .floating-description-box a > button
-{
-    padding: 0.5rem 1.5rem;
-    background-color: var(--dark-blue);
-    border: solid 2px var(--clear-blue);
-    color: var(--font-color-clear-blue);
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    font-family: var(--third-font);
-    cursor: pointer;
-}
-
 /*---------- Time Line ---------*/
 .tribute-body .tribute-main .timeline-container
 {
     width: 100%;
-    padding: 2rem;
+    padding: 1.9rem;
     background-color: var(--clear-dark-blue);
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend
+{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .tribute-body .tribute-main .timeline-container .lovecraft-leyend .image-container
@@ -162,32 +177,44 @@ a
 .tribute-body .tribute-main .timeline-container .lovecraft-leyend .image-container img
 {
     width: 70%;
-    max-width: 450px;
+    max-width: 270px;
     margin: 0 auto;
-    display: block;
-    filter: saturate(0%);
-    border: solid 4px var(--white-blue);
+    display: block;    
+    box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.6);    
 }
 
 .tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container
 {
     text-align: center;
+    width: 100%;
+    max-width: 450px;
+    background-color: rgba(22, 37, 56, 0.6);
+    border: solid 4px var(--clear-blue);
+    padding: 2rem;
 }
 
 .tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container h2
 {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 1.8rem, 2.4rem);
     font-family: var(--main-font);
-    color: var(--font-color-dark-blue);
+    color: var(--white-blue);
     margin-block-end: 1.5rem;
 }
 
 .tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container p
 {
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 1.4rem, 1.6rem);
     font-family: var(--third-font);
     font-weight: 500;
-    color: var(--font-color-dark-blue);
+    line-height: 20px;
+    color: var(--white-blue);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container button
+{
+    margin-top: 1rem;
 }
 
 /*----------Media Queries----------*/
@@ -197,5 +224,32 @@ a
     .tribute-body .tribute-main .hero-container .image-container .floating-description-box
     {
         padding: 2rem 2rem;
+    }
+
+    .tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container
+    {
+        text-align: left;
+    }
+    
+    .tribute-body .tribute-main .hero-container .image-container .floating-description-box
+    {
+        background-color:rgba(22, 37, 56, 0);
+    }
+}
+
+@media (min-width: 758px) {
+    .tribute-body .tribute-main .timeline-container .lovecraft-leyend
+    {
+        padding: 2.5rem 0;
+    }
+    
+    .tribute-body .tribute-main .timeline-container .lovecraft-leyend .image-container
+    {
+        margin-block-end: 0;
+    }
+
+    .tribute-body .tribute-main .timeline-container .lovecraft-leyend .description-container
+    {
+        box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5);
     }
 }
