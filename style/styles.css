@@ -73,7 +73,6 @@ html
 .tribute-body .tribute-main 
 {
     width: 100%;
-    height: fit-content;
     padding: 0 0 2.5rem 0;
 }
 
@@ -82,7 +81,12 @@ html
 .tribute-body .tribute-main .hero-container
 {
     width: 100%;
-    height: fit-content;
+}
+
+.tribute-body .tribute-main .hero-container .image-container
+{
+    position: relative;
+    background-color: var(--middle-dark-blue);    
 }
 
 .tribute-body .tribute-main .hero-container .image-container img
@@ -91,4 +95,28 @@ html
     max-width: 1200px;
     margin: 0 auto;
     display: block;
+    filter: saturate(20%);
+}
+
+.tribute-body .tribute-main .hero-container .image-container a
+{
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: calc(50%);
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+}
+
+.tribute-body .tribute-main .hero-container .image-container a > button
+{
+    padding: 0.5rem 1.5rem;
+    background-color: var(--dark-blue);
+    border: solid 4px var(--clear-blue);
+    color: var(--font-color-clear-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-family: 'Amiri', serif;
 }
