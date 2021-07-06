@@ -3,6 +3,7 @@
 :root
 {
     --dark-blue: #162538;
+    --background-gradient: linear-gradient(to top, #2e7b8c, #162538);
     --middle-dark-blue: #22344b;
     --clear-dark-blue: #84a0c5;
     --middle-blue: #2e7b8c;
@@ -76,7 +77,10 @@ button:hover
     display: grid;
     place-items: center;    
     padding: 1rem 0;
-    z-index: 1;
+    z-index: 99;
+    display: inline-block;
+
+    box-shadow: 0 15px 25px rgba(80, 250, 250, 0.2);
 }
 
 .tribute-header__text-container
@@ -108,11 +112,6 @@ button:hover
 {
     width: 100%;
     height: fit-content;
-
-    /* background-image: url('http://imgfz.com/i/IOUEKbu.jpeg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 
 /* --------HERO---------*/
@@ -120,14 +119,14 @@ button:hover
 .hero-container
 {
     width: 100%;   
-    background-color: var(--middle-dark-blue); 
+    background: var(--background-gradient); 
 }
 
 .hero-container .image-container
 {  
     width: 100%;
     max-width: 1500px;
-    background-color: var(--middle-blue);
+    background-color: var(--background-gradient);
     margin: 0 auto;
     display: block;      
     position: relative;
@@ -138,12 +137,13 @@ button:hover
 {
     width: 100%;
     filter: saturate(0%);
+    /* border-radius: 0 0 66px 66px; */
 }
 
 .hero-container .image-container figcaption
 {
     color: var(--font-color-clear-blue);
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 1.6rem, 1.8rem);
     font-weight: 500;
     padding: 1rem 0;
     font-family: var(--secondary-font);
@@ -254,7 +254,7 @@ button:hover
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    background-color: rgba(22, 37, 56, 0.7);
+    background-image: linear-gradient(to top, rgba(80, 250, 250, 0.2), rgba(22, 37, 56, 0.6));
     margin-bottom: 3rem;
 }
 
@@ -420,6 +420,13 @@ button:hover
     .hero-container .image-container .floating-description-box
     {
         background-color:rgba(22, 37, 56, 0);
+    }
+}
+
+@media (min-width: 600px) {
+    .hero-container .image-container img
+    {
+        border-radius: 0 0 66px 66px;
     }
 }
 
