@@ -26,7 +26,9 @@
 
 html 
 {   
+    scroll-behavior: smooth;
     
+    width: 100vw;
     font-family: 'Open Sans', sans-serif;
     font-size: 62.5%;
     /* font-family: 'Cinzel Decorative', cursive;
@@ -36,6 +38,7 @@ html
 .tribute-body
 {
     width: 100vw;
+    overflow-x: hidden;
 }
 
 a
@@ -56,6 +59,11 @@ button
     font-family: var(--third-font);
     cursor: pointer;
     box-shadow: 2px 2px 45px var(--clear-blue);
+}
+
+button:hover
+{
+    text-decoration: underline;
 }
 
 /* Header*/
@@ -100,6 +108,11 @@ button
 {
     width: 100%;
     height: fit-content;
+
+    /* background-image: url('http://imgfz.com/i/IOUEKbu.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 /* --------HERO---------*/
@@ -113,7 +126,7 @@ button
 .hero-container .image-container
 {  
     width: 100%;
-    max-width: 1400px;
+    max-width: 1500px;
     background-color: var(--middle-blue);
     margin: 0 auto;
     display: block;      
@@ -162,9 +175,12 @@ button
 /*---------- Time Line ---------*/
 .tribute-main .timeline-container
 {
-    width: 100%;
-    /* padding: 1.9rem; */
-    background-color: var(--clear-dark-blue);
+    width: 100%;    
+    
+    background-image: url('http://imgfz.com/i/IOUEKbu.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*------------Lovecraft Legend------------*/
@@ -178,7 +194,7 @@ button
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .lovecraft-leyend .image-container
@@ -200,10 +216,9 @@ button
     text-align: center;
     width: 100%;
     max-width: 450px;
-    background-color: rgba(22, 37, 56, 0.6);
+    background-color: rgba(22, 37, 56, 0.8);
     border: solid 4px var(--clear-blue);
     padding: 2rem;
-    /* margin-bottom: 2rem; */
 }
 
 .lovecraft-leyend .description-container h2
@@ -235,11 +250,18 @@ button
 .timeline-container .famous-tales-section
 {
     text-align: center;
-    padding: 3.5rem 0;
+    padding: 3rem 0 5rem 0;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
-    background-color: var(--middle-dark-blue);
+    background-color: rgba(22, 37, 56, 0.7);
+    margin-bottom: 3rem;
+}
+
+
+.famous-tales-section:hover section > article > .books-container__book--foreground
+{
+    opacity: 0.9;
 }
 
 .famous-tales-section h2
@@ -254,12 +276,11 @@ button
 
 .famous-tales-section .books-container
 {
-    padding: 0 2rem;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(190px, 220px));
     grid-auto-rows: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
     place-content: center;
 }
 
@@ -272,6 +293,8 @@ button
     border: solid 4px var(--clear-blue);
     box-shadow: 10px 10px 25px var(--clear-blue);
 }
+
+
 
 .books-container__book--background
 {
@@ -303,9 +326,17 @@ button
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(16, 46, 53, 0.9);
-    /* visibility: hidden; */
-    /* opacity: 0.8; */
+    background-color: rgb(22, 37, 56);
+    opacity: 0;
+    transition: opacity linear 1s;
+    transition-delay: 0.3s;
+}
+
+.books-container__book--foreground:active
+{
+    opacity: 0.9;
+    transition: opacity linear 1s;
+    transition-delay: 0.3s;
 }
 
 .books-container__book--foreground h3
@@ -330,21 +361,47 @@ button
     width: 100%;
     padding: 2rem;
     text-align: center;
+    background-color: rgb(39, 63, 94);
+}
+
+.timeline-container .quote-container p:nth-child(1)
+{
+    margin-bottom: 1.5rem;
 }
 
 .timeline-container .quote-container p
 {
     font-size: 1.2rem;    
-    color: var(--font-color-dark-blue);
+    color: var(--font-color-clear-blue); 
 }
 
 .timeline-container .quote-container p > q
 {
     font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-weight: 700;   
+    color: var(--font-color-clear-blue); 
 }
 
+/* Footer */
+.tribute-body .tribute-footer
+{
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--dark-blue);
+}
+
+.tribute-body .tribute-footer p
+{
+    font-size: clamp(1.2rem, 1.4rem, 1.6rem);
+    color: var(--white-blue);
+}
+
+.tribute-body .tribute-footer p > a
+{
+    font-weight: bold;
+}
 
 /*----------Media Queries----------*/
 
