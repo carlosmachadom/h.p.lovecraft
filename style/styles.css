@@ -100,19 +100,23 @@ button
 {
     width: 100%;
     height: fit-content;
-    padding: 0 0 2.5rem 0;
 }
 
 /* --------HERO---------*/
 
 .hero-container
 {
-    width: 100%;    
+    width: 100%;   
+    background-color: var(--middle-dark-blue); 
 }
 
 .hero-container .image-container
 {  
-    background-color: var(--middle-dark-blue);
+    width: 100%;
+    max-width: 1400px;
+    background-color: var(--middle-blue);
+    margin: 0 auto;
+    display: block;      
     position: relative;
     text-align: center;    
 }
@@ -120,12 +124,17 @@ button
 .hero-container .image-container img
 {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: block;
     filter: saturate(0%);
 }
 
+.hero-container .image-container figcaption
+{
+    color: var(--font-color-clear-blue);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    font-family: var(--secondary-font);
+}
 .hero-container .image-container .floating-description-box
 {
     width: 100%;
@@ -135,7 +144,7 @@ button
     position: absolute;
     top: calc(50%);
     left: calc(50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -65%);
     background-color:rgba(22, 37, 56, 0.4);
 }
 
@@ -154,7 +163,7 @@ button
 .tribute-main .timeline-container
 {
     width: 100%;
-    padding: 1.9rem;
+    /* padding: 1.9rem; */
     background-color: var(--clear-dark-blue);
 }
 
@@ -169,6 +178,7 @@ button
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .lovecraft-leyend .image-container
@@ -193,7 +203,7 @@ button
     background-color: rgba(22, 37, 56, 0.6);
     border: solid 4px var(--clear-blue);
     padding: 2rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 .lovecraft-leyend .description-container h2
@@ -227,7 +237,7 @@ button
     text-align: center;
     padding: 3.5rem 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     background-color: var(--middle-dark-blue);
 }
@@ -239,11 +249,12 @@ button
     line-height: 35px;
     font-family: var(--secondary-font);
     color: var(--white-blue);
+    margin-bottom: 2rem;
 }
 
 .famous-tales-section .books-container
 {
-    padding: 2rem;
+    padding: 0 2rem;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(190px, 220px));
@@ -311,8 +322,28 @@ button
     color: var(--font-color-clear-blue);
 }
 
+/*---------Quote---------*/
 
 
+.tribute-body .timeline-container .quote-container
+{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.timeline-container .quote-container p
+{
+    font-size: 1.2rem;    
+    color: var(--font-color-dark-blue);
+}
+
+.timeline-container .quote-container p > q
+{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
 
 
 /*----------Media Queries----------*/
@@ -338,7 +369,7 @@ button
 @media (min-width: 758px) {
     .timeline-container .lovecraft-leyend
     {
-        padding: 2.5rem 0;
+        padding: 3rem 0;
     }
     
     .timeline-container .lovecraft-leyend .image-container
